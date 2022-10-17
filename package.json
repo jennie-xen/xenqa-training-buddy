@@ -1,0 +1,21 @@
+{
+  "name": "cypresscucumber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "executeCase": "node_modules/.bin/cypress run --spec cypress/integration/BDD/sampleTest.feature",
+    "allure-report": "allure generate cypress/allure-results --clean -o cypress/allure-report && allure open  cypress/allure-report"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.33.0",
+    "cypress": "^9.7.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  }
+}
